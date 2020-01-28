@@ -22,6 +22,7 @@
     "ffmpeg": "^0.0.4",
     "ffmpeg-binaries": "^4.0.0",
     "node-opus": "^0.3.2",
-    "weather-js": "^2.0.0"
+    "weather-js": "^2.0.0",
+    "discord-giveaways": "^2.4.4"
   }
 }

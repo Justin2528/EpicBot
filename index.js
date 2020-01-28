@@ -2,10 +2,9 @@ const { Client, Collection } = require("discord.js");
 const { config } = require("dotenv");
 const fs = require("fs");
 const snekfetch = require("snekfetch");
+const giveaways = require("discord-giveaways")
 
-const client = new Client({
-    disableEveryone: true
-});
+const client = new Client();
 const ownerID = '386490806716071946'
 const active = new Map();
  let ops = {
@@ -54,13 +53,25 @@ client.on("ready", () => {
         .send({
             'guildCount': client.guilds.size
 
-        }).then(console.log(`${client.guilds.size} was posted`))
-  }, 30000 );
+        }).then(console.log(`${client.guilds.size} was posted`)).catch((err) => {
+            console.log("ERROR! \n" + err);
+        });
+  }, 30000 )
 
 setInterval(function() {
   let stats = status[Math.floor(Math.random()*status.length)];
   client.user.setPresence({ game: { name: stats }, status: 'online', type: "WATCHING" })
 }, 5000);
+
+    giveaways.launch(client, {
+        updateCountdownEvery: 5000,
+        botsCanWin: false,
+        ignoreIfHasPermission: [
+
+        ],
+        embedColor: "#00FFFF",
+        reaction: "🎉"
+    });
 });
 
 client.on("message", async message => {

@@ -3,6 +3,7 @@ dependencies:
   beautify: 0.0.8
   chance: 1.1.4
   common-tags: 1.8.0
+  discord-giveaways: 2.4.4
   discord.js: 11.5.1
   dotenv: 8.2.0
   express: 4.17.1
@@ -64,6 +65,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
+  /array-uniq/1.0.2:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-X8w3OSB3VyPP1k1lxkvvU7+eum0=
   /ascii-table/0.0.9:
     dev: false
     resolution:
@@ -586,6 +593,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
+  /discord-giveaways/2.4.4:
+    dependencies:
+      randomstring: 1.1.5
+    dev: false
+    resolution:
+      integrity: sha512-6Qq8FndB8+GYJDF0OvV/YXDNJBdJF0mJrD/1PDdLDRkVWngbVZ2G5AdwBB4Vl6AekKVpDnu6iIPVP4lydziLFQ==
   /discord.js/11.5.1:
     dependencies:
       long: 4.0.0
@@ -1712,6 +1725,13 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha1-GtqjTA83bVArWdb9gifqYaRUmTs=
+  /randomstring/1.1.5:
+    dependencies:
+      array-uniq: 1.0.2
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-bfBij3XL1ZMpMNn+OrTpVqGFGMM=
   /range-parser/1.2.1:
     dev: false
     engines:
@@ -2306,6 +2326,7 @@ specifiers:
   beautify: ^0.0.8
   chance: ^1.1.4
   common-tags: ^1.8.0
+  discord-giveaways: ^2.4.4
   discord.js: ^11.5.1
   dotenv: ^8.2.0
   express: ^4.17.1
