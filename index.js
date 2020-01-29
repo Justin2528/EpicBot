@@ -3,6 +3,8 @@ const { config } = require("dotenv");
 const fs = require("fs");
 const snekfetch = require("snekfetch");
 const giveaways = require("discord-giveaways")
+const DBL = require("dblapi.js");
+const Enmap = require('enmap');
 
 const client = new Client();
 const ownerID = '386490806716071946'
@@ -20,7 +22,22 @@ var servers = {};
 const express = require('express');
 const keepalive = require('express-glitch-keepalive');
 const app = express();
-
+client.settings = new Enmap({
+  name: "settings",
+  fetchAll: false,
+  autoFetch: true,
+  cloneLevel: 'deep'
+});
+const dsettings = {
+  modLogChannel: "mod-log",
+  welcomeChannel: "welcome",
+  welcomeMessage: "Say hello to {{user}}, everyone!",
+  reportChannel: "report"
+}
+client.on("guildDelete", guild => {
+  // When the bot leaves or is kicked, delete settings to prevent stale entries.
+  client.settings.delete(guild.id);
+});
 app.use(keepalive);
 
 app.use(express.static('public'));
@@ -81,7 +98,7 @@ client.on("message", async message => {
       ownerID: ownerID,
       active: active
     }
-
+const guildconf = client.settings.ensure(message.guild.id, dsettings);
     if (message.author.bot) return;
     if (!message.guild) return;
     if (!message.content.startsWith(prefix)) return;
@@ -96,7 +113,7 @@ client.on("message", async message => {
     if (!command) command = client.commands.get(client.aliases.get(cmd));
 
     if (command) 
-        command.run(client, message, args, ops);
+        command.run(client, message, args, ops,guildconf,dsettings);
 });
 
 client.login(process.env.TOKEN);

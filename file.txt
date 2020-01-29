@@ -4,7 +4,7 @@ module.exports = {
     description: "",
      usage: "",
  aliases: [""],
-    run: async (client, message, args,ops) => {
+    run: async (client, message, args,ops,guildconf,dsettings) => {
       
 
     }
