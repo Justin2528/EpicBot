@@ -84,7 +84,7 @@ module.exports = {
                         if (err) return message.channel.send(`Well.... the ban didn't work out. Here's the error ${err}`)
                     });
     let derp = message.guild.channels.find("name", client.settings.get(message.guild.id, "modLogChannel"))
-    if(!derp) return message.channel.send("If you need log, plz type epic>setconf modLogChannel <value(Channel Name)>")
+    if(!derp) return message.channel.send("If you need log, plz type epic>setconf modLogChannel <value(Channel Name NOT #something)>")
                 derp.send(embed);
             } else if (emoji === "❌") {
                 msg.delete();

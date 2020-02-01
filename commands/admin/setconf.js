@@ -12,7 +12,7 @@ module.exports = {
       const [prop, ...value] = args;
 
    if(!args[0]){
- return message.channel.send("INFO: (Settings: modLogChannel (Remember, Say name and not like #modLog)) SINCE THIS FEATURE IS IN BETA, Unless you want to type epic>showconf");
+ return message.channel.send("INFO: (Settings: modLogChannel (Remember, Say like general and not like #modLog SO MANY PEOPLE MAKE THIS ERROR OK DON'T THINK THIS IS NOTHING BOOMER)) SINCE THIS FEATURE IS IN BETA, Unless you want to type epic>showconf");
     }
 
        if(!client.settings.has(message.guild.id, prop)) {

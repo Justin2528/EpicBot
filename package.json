@@ -28,5 +28,6 @@
     "discord.js-minesweeper": "^1.0.5",
     "enmap": "^5.2.4",
     "moment": "^2.24.0"
-  }
+  },
+  "license": "MIT"
 }

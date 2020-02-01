@@ -51,7 +51,7 @@ module.exports = {
     }
 
     let modlog = message.guild.channels.find("name", client.settings.get(message.guild.id, "modLogChannel"))
-       if(!modlog) return message.channel.send("PLZ do epic>setconf modLogChannel <Channel Name>. You need log right?")
+           if(!modlog) return message.channel.send("If you need log, plz type epic>setconf modLogChannel <value(Channel Name NOT #something)>")
 
     
         //user.kick({ reason: `${reason}`})
