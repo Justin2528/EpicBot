@@ -10,3 +10,28 @@ module.exports = {
 
     }
 }
+
+// Disabled Command
+let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
+let embedwarn = new Discord.RichEmbed()
+.setColor("RED")
+.setTitle("This command has been disabled.")
+.setDescription("Sorry! This command has been disabled. If you need support, join our support server `epic>support` or `epic>ticket` if you want to create a ticket or even contact PoopyheadJustin#9111")
+.setThumbnail(ok)
+.setFooter("Sad", message.author.displayAvatarURL);
+
+return message.channel.send(embedwarn).then(m => m.delete(5500))
+
+Or
+
+let reason = "" // reason 
+
+let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
+let embedwarn = new Discord.RichEmbed()
+.setColor("RED")
+.setTitle("This command has been disabled.")
+.setDescription(`Sorry! This command has been disabled because **\`${reason}\`**.`)
+.setThumbnail(ok)
+.setFooter("Sad", message.author.displayAvatarURL);
+
+return message.channel.send(embedwarn).then(m => m.delete(5500))

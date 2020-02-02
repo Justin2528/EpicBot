@@ -8,6 +8,18 @@ module.exports = {
   category: "fun",
   description: "Random stuff don't ask",
   run: async (client, message, args) => {
+message.delete()
+let reason = "this command is useless and I created it for no reason" // reason 
+
+let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
+let embedwarn = new Discord.RichEmbed()
+.setColor("RED")
+.setTitle("This command has been disabled.")
+.setDescription(`Sorry! This command has been disabled because **\`${reason}\`**.`)
+.setThumbnail(ok)
+.setFooter("Sad", message.author.displayAvatarURL);
+
+return message.channel.send(embedwarn).then(m => m.delete(5500))
     const embed = new Discord.RichEmbed().setColor(0xffffff);
 
     // Check if they typed 'list' / didn't mention an item

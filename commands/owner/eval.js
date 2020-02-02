@@ -7,7 +7,7 @@ module.exports = {
   usage: "<secret code to do idk>",
   aliases: ["e"],
   run: async (client, message, args) => {
-    if (!message.author.id == "386490806716071946") {
+    if (message.author.id !== "386490806716071946") {
       return message.channel.send("No. boomer").then(m => m.delete(5000));
     }
 

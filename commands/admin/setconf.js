@@ -5,14 +5,14 @@ module.exports = {
      usage: "<config> <value>",
 
     run: async (client, message, args,ops,guildconf,dsettings) => {
-      if(!message.member.hasPermission(0x00000008)) {
-  return message.channel.send("You don't have the `Administrator` Perms!")
+      if(!message.member.hasPermission("MANAGE_SERVER")) {
+  return message.channel.send("You don't have the `Manage Server` Perms!")
 }
   
       const [prop, ...value] = args;
 
    if(!args[0]){
- return message.channel.send("INFO: (Settings: modLogChannel (Remember, Say like general and not like #modLog SO MANY PEOPLE MAKE THIS ERROR OK DON'T THINK THIS IS NOTHING BOOMER)) SINCE THIS FEATURE IS IN BETA, Unless you want to type epic>showconf");
+ return message.channel.send("INFO: (Settings: modLogChannel (Remember, Say like general and not like #modLog SO MANY PEOPLE MAKE THIS ERROR OK DON'T THINK THIS IS NOTHING BOOMER) just like modLogChannel, levelupChannel. and levelupMessage ({{user}}, {{newlevel}})) SINCE THIS FEATURE IS IN BETA, Unless you want to type epic>showconf");
     }
 
        if(!client.settings.has(message.guild.id, prop)) {
