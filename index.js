@@ -5,7 +5,7 @@ const snekfetch = require("snekfetch");
 const giveaways = require("discord-giveaways")
 const DBL = require("dblapi.js");
 const Enmap = require('enmap');
-const client = new Client();
+const client = new Client({ disableEveryone: true });
 client.points = new Enmap({name: "points"});
 
 const ownerID = '386490806716071946'

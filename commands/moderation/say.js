@@ -3,7 +3,7 @@ const { RichEmbed } = require("discord.js");
 module.exports = {
     name: "say",
     aliases: ["bc", "broadcast"],
-    description: "Says your input via the bot",
+    description: "Says your input via the bot. reminder: I have turned off @everyone and @here.",
     usage: "<input>",
     run: (client, message, args) => {
         message.delete();
