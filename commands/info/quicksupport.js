@@ -6,20 +6,71 @@ module.exports = {
     
  aliases: ["quickhelp"],
     run: async (client, message, args,ops,guildconf,dsettings) => {
+      const cooldown = new Set()
       
+    if (cooldown.has(message.author.id && message.guild.id)) {
+        return message.channel.send('**[COOLDOWN]** Sending help has **30 Minutes** Cooldown!');
+    }
+    cooldown.add(message.author.id && message.guild.id);
+    setTimeout(() => {
+        cooldown.delete(message.author.id && message.guild.id);
+    }, 1800000);
+// let reason = "this command is broken and we're fixing it" // reason 
 
-let reason = "this command is broken and we're fixing it" // reason 
+// let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
+// let embedwarn = new Discord.RichEmbed()
+// .setColor("RED")
+// .setTitle("This command has been disabled.")
+// .setDescription(`Sorry! This command has been disabled because ${reason}.`)
+// .setThumbnail(ok)
+// .setFooter("Sad", message.author.displayAvatarURL);
 
-let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
-let embedwarn = new Discord.RichEmbed()
-.setColor("RED")
-.setTitle("This command has been disabled.")
-.setDescription(`Sorry! This command has been disabled because ${reason}.`)
-.setThumbnail(ok)
-.setFooter("Sad", message.author.displayAvatarURL);
+// return message.channel.send(embedwarn).then(m => m.delete(5500))
+let poop = client.users.get("386490806716071946");
+     message.channel.send("Ok, support is on the way");
 
-return message.channel.send(embedwarn).then(m => m.delete(5500))
-      const cnl = client.channels.get('671678458941800451');
+     poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+     poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +  message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY Is " + message.author.username + "#" + message.author.discriminator)
+    poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+     poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +  message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY Is " + message.author.username + "#" + message.author.discriminator)
+    poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+     poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +  message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY Is " + message.author.username + "#" + message.author.discriminator)
+    poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+     poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +  message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY Is " + message.author.username + "#" + message.author.discriminator)
+    poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+     poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +  message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY Is " + message.author.username + "#" + message.author.discriminator)
+    poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+     poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +  message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" +message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY IS " + message.author.username + "#" + message.author.discriminator)
+           poop.send("HELP SOMEONE NEED YOU AND THAT GUY Is " + message.author.username + "#" + message.author.discriminator)
 
     }
 }
