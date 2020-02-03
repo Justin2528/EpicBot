@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - 10
 
-install: pnpm i
-cache: pnpm
+install: npm i
+cache: npm
