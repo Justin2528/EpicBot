@@ -9,3 +9,4 @@
 ##### ***Quick Note***: All the money ***right now*** will be donated to charity because I want to help idk
 ###### ***QUICK NOTE IDK: JOIN SUPPORT SERVER FOR ACTUAL HELP IT'S A TEMP MEMBER LINK OK THX***
 
+[![status](https://travis-ci.com/Justin2528/EpicBot.svg?branch=glitch)](https://travis-ci.com/Justin2528/EpicBot)

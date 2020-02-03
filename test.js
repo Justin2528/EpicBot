@@ -1,28 +1,20 @@
-const { readdirSync } = require("fs");
+const fs = require("fs");
+fs.readdir("./commands/", (err, files) => {
 
-const ascii = require("ascii-table");
+    if(err) console.log(err)
+    
 
-let table = new ascii("Commands");
-table.setHeading("Command", "Load status");
 
-module.exports = (client) => {
-    readdirSync("./commands/").forEach(dir => {
-        const commands = readdirSync(`./commands/${dir}/`).filter(file => file.endsWith(".js"));
     
-        for (let file of commands) {
-            let pull = require(`../commands/${dir}/${file}`);
+    let jsfile = files.filter(f => f.split(".").pop() === "js")
+    if(jsfile.length <= 0) {
+        console.log("[LOGS] No Javascript Files. Nothing Loaded.")
+    } 
     
-            if (pull.name) {
-                client.commands.set(pull.name, pull);
-                table.addRow(file, '✅');
-            } else {
-                table.addRow(file, `❌  -> missing a help.name, or help.name is not a string.`);
-                continue;
-            }
-    
-            if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => client.aliases.set(alias, pull.name));
-        }
-    });
-    
-    console.log(table.toString());
-}
+    jsfile.forEach((f, i) => {
+        let pull = require(`./commands/${f}`);
+      console.log(`${f} loaded!`)
+    })
+});
+
+console.log("COMPLETE!")
