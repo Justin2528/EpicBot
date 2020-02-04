@@ -5,8 +5,7 @@ module.exports = {
     name: "ticket",
     category: "info",
     description: "Create a ticket",
-     usage: "",
- aliases: [""],
+
     run: async (client, message, args,ops,guildconf,dsettings) => {
       
 

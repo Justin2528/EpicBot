@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+   const cooldown = new Set();
 module.exports = {
     name: "quicksupport",
     category: "info",
@@ -6,15 +7,15 @@ module.exports = {
     
  aliases: ["quickhelp"],
     run: async (client, message, args,ops,guildconf,dsettings) => {
-      const cooldown = new Set()
+   
       
     if (cooldown.has(message.author.id && message.guild.id)) {
-        return message.channel.send('**[COOLDOWN]** Sending help has **30 Minutes** Cooldown!');
+        return message.channel.send('**[COOLDOWN]** Sending `help` has **7 Minutes** Cooldown!');
     }
     cooldown.add(message.author.id && message.guild.id);
     setTimeout(() => {
         cooldown.delete(message.author.id && message.guild.id);
-    }, 1800000);
+    }, 50000);
 // let reason = "this command is broken and we're fixing it" // reason 
 
 // let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
