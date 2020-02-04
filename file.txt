@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const send = require('quick.hook');
 module.exports = {
     name: "",
     category: "",

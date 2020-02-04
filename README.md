@@ -10,3 +10,4 @@
 ###### ***QUICK NOTE IDK: JOIN SUPPORT SERVER FOR ACTUAL HELP IT'S A TEMP MEMBER LINK OK THX***
 
 [![status](https://travis-ci.com/Justin2528/EpicBot.svg?branch=glitch)](https://travis-ci.com/Justin2528/EpicBot)
+[![EpicBot Introduce](https://res.cloudinary.com/marcomontalbano/image/upload/v1580818268/video_to_markdown/images/vimeo--389224374-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://vimeo.com/389224374 "EpicBot Introduce")

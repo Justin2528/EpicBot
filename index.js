@@ -1,4 +1,4 @@
-const { Client, Collection, RichEmbed } = require("discord.js");
+const { Client, Collection, RichEmbed, WebhookClient } = require("discord.js");
 const { config } = require("dotenv");
 const fs = require("fs");
 const snekfetch = require("snekfetch");
@@ -6,6 +6,7 @@ const giveaways = require("discord-giveaways")
 const DBL = require("dblapi.js");
 const Enmap = require('enmap');
 const client = new Client({ disableEveryone: true });
+const mentionHook = new WebhookClient("674133394623299595", process.env.WEBKEN);
 client.points = new Enmap({name: "points"});
 
 const ownerID = '386490806716071946'

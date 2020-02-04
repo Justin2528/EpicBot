@@ -18,6 +18,7 @@ dependencies:
   node-fetch: 2.6.0
   node-opus: 0.3.3
   quick.db: 6.3.2
+  quick.hook: 1.5.1
   random-puppy: 1.1.0
   relevant-urban: 2.0.0
   weather-js: 2.0.0
@@ -1921,6 +1922,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+Fd7skXH/MDoX4TIlwstzt4TsjOqF/3joDurXrSEePf0KPYXEwwq3EnzoJ6C4dzZ58KGSasNdAU1OeC8envvWA==
+  /quick.hook/1.5.1:
+    dev: false
+    resolution:
+      integrity: sha512-5Rmt7Y7Zz9TnU/mE/ywxCmOkHa3Evyag+HtTdlFIFOykdfs2jbZYl7xzZghdRD3GuBW/M9YvNB8nD7WBvtQMfQ==
   /random-puppy/1.1.0:
     dependencies:
       eventemitter3: 1.2.0
@@ -2626,6 +2631,7 @@ specifiers:
   node-fetch: ^2.6.0
   node-opus: ^0.3.2
   quick.db: ^6.3.2
+  quick.hook: ^1.5.1
   random-puppy: ^1.1.0
   relevant-urban: ^2.0.0
   weather-js: ^2.0.0
