@@ -8,7 +8,7 @@ usage: "<stuff>",
  aliases: ["wh"],
     run: async (client, message, args,ops,guildconf,dsettings) => {
 let reason = "command broken and fixing" // reason 
-
+message.delete()
 let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
 let embedwarn = new Discord.RichEmbed()
 .setColor("RED")

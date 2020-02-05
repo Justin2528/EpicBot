@@ -86,6 +86,7 @@ module.exports = {
     let derp = message.guild.channels.find("name", client.settings.get(message.guild.id, "modLogChannel"))
     if(!derp) return message.channel.send("If you need log, plz type epic>setconf modLogChannel <value(Channel Name NOT #something)>")
                 derp.send(embed);
+toKick.send(`You have been kicked by ${message.author.username} in ${message.guild.name}. Reason: ${args.slice(1).join(" ")}`)
             } else if (emoji === "❌") {
                 msg.delete();
 

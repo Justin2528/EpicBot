@@ -26,7 +26,7 @@ return message.channel.send(embedwarn).then(m => m.delete(5500))
 Or
 
 let reason = "" // reason 
-
+message.delete()
 let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
 let embedwarn = new Discord.RichEmbed()
 .setColor("RED")

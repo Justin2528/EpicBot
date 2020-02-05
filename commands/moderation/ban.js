@@ -61,7 +61,7 @@ module.exports = {
             .setThumbnail(toBan.user.displayAvatarURL)
             .setFooter(message.member.displayName, message.author.displayAvatarURL)
             .setTimestamp()
-            .setDescription(stripIndents`**- baned member:** ${toBan} (${toBan.id})
+            .setDescription(stripIndents`**- banned member:** ${toBan} (${toBan.id})
             **- baned by:** ${message.member} (${message.member.id})
             **- Reason:** ${args.slice(1).join(" ")}`);
 
@@ -86,6 +86,7 @@ module.exports = {
     let derp = message.guild.channels.find("name", client.settings.get(message.guild.id, "modLogChannel"))
     if(!derp) return message.channel.send("If you need log, plz type epic>setconf modLogChannel <value(Channel Name NOT #something)>")
                 derp.send(embed);
+toBan.send(`You have been banned by ${message.author.username} in ${message.guild.name}. Reason: ${args.slice(1).join(" ")}`)
             } else if (emoji === "❌") {
                 msg.delete();
 
