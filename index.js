@@ -96,7 +96,9 @@ setInterval(function() {
 });
 
 client.on("message", async message => {
-    const prefix = "epic>";
+   if (message.author.bot) return;   
+if (message.isMentioned(client.user)) message.reply("my prefix is **`epic>`**! Help Command: **`epic>help`**").then(m => m.delete(4000))
+const prefix = "epic>";
 
  let ops = {
       ownerID: ownerID,
@@ -111,7 +113,7 @@ let embedwarn = new RichEmbed()
 .setDescription(`Sorry! DM Channel has been disabled`)
 .setThumbnail(ok)
 .setFooter("Sad", message.author.displayAvatarURL);
-   if (message.author.bot) return;
+ 
 
 if(message.channel.type === "dm") return message.channel.send(embedwarn).then(m => m.delete(5000));
  
