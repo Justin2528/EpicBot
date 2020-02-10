@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const send = require('quick.hook');
+
 module.exports = {
     name: "",
     category: "",
@@ -25,14 +25,15 @@ return message.channel.send(embedwarn).then(m => m.delete(5500))
 
 Or
 
-let reason = "" // reason 
+let reason = ""
+if (!reason) reason = "am too lazy to set the reason so NO REASON PROVIDED" // reason 
 message.delete()
-let ok = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
+let ok2 = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
 let embedwarn = new Discord.RichEmbed()
 .setColor("RED")
 .setTitle("This command has been disabled.")
 .setDescription(`Sorry! This command has been disabled because **\`${reason}\`**.`)
-.setThumbnail(ok)
+.setThumbnail(ok2)
 .setFooter("Sad", message.author.displayAvatarURL);
 
 return message.channel.send(embedwarn).then(m => m.delete(5500))

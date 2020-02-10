@@ -1,6 +1,7 @@
-![image](https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif)
+![image](https://cdn.discordapp.com/attachments/671678458941800451/676450982002950184/1177_Pensive_Weird.gif)
 # NEWS
-### ADDED LEVEL BAR AND SOME OTHER FEATURES TO epic>hypixel COMMAND 6/2/2020
+### NEW COMMAND removewarn AND info 10/2/2020
+##### ADDED LEVEL BAR AND SOME OTHER FEATURES TO epic>hypixel COMMAND 6/2/2020
 ##### ADDED BAN/KICK MESSAGE THAT WILL SEND TO THE BAN/KICK GUY 5/2/2020
 ##### FIXED SOME TYPO 5/2/2020
 ##### MADE THAT YOU CAN'T SAY @everyone or @here using epic>say 3/2/2020
