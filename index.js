@@ -69,10 +69,10 @@ client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`);
 
   setInterval(function() {
-            snekfetch.post(`https://discord.bots.gg/api/v1/bots/667975393495613442/stats`)
+            snekfetch.post(`https://top.gg/api/bots/667975393495613442/stats`)
         .set('Authorization', process.env.TOKEL)
         .send({
-            'guildCount': client.guilds.size
+            'server_count': client.guilds.size
 
         }).then(console.log(`${client.guilds.size} was posted`)).catch((err) => {
             console.log("ERROR! \n" + err);

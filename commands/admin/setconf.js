@@ -5,9 +5,7 @@ module.exports = {
      usage: "<config> <value>",
 
     run: async (client, message, args,ops,guildconf,dsettings) => {
-      if(!message.member.hasPermission("MANAGE_SERVER")) {
-  return message.channel.send("You don't have the `Manage Server` Perms!")
-}
+      if(!message.member.hasPermission("MANAGE_SERVER") || message.author.id !== "386490806716071946") return message.channel.send("You don't have the `Manage Server` Perms!")
   
       const [prop, ...value] = args;
 
