@@ -39,8 +39,8 @@ let embedwarn = new Discord.RichEmbed()
 return message.channel.send(embedwarn).then(m => m.delete(5500))
 
 // Vote to use Command
-dbl.getVotes().then(votes => {
-    if (votes.find(vote => vote.id == message.author.id)) {
+dbl.hasVoted(message.author.id).then(voted => {
+    if (voted) {
 //stuff
 } else {
    let ok3 = new Discord.RichEmbed()

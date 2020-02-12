@@ -6,13 +6,26 @@ module.exports = {
   usage: "<Minecraft IGN>",
   aliases: ["h"],
   run: async (client, message, args) => {
+  message.delete();
 const DBL = require("dblapi.js");
 const dbl = new DBL(process.env.TOKEL, client);
-dbl.getVotes().then(votes => {
-    if (votes.find(vote => vote.id == message.author.id)) {
+// let reason = "the vote feature is broken"
+// if (!reason) reason = "am too lazy to set the reason so NO REASON PROVIDED" // reason 
+// message.delete()
+// let ok2 = "https://cdn.discordapp.com/attachments/671678458941800451/673527187160301568/1177_Pensive_Weird.gif"
+// let embedwarn = new Discord.RichEmbed()
+// .setColor("RED")
+// .setTitle("This command has been disabled.")
+// .setDescription(`Sorry! This command has been disabled because **\`${reason}\`**.`)
+// .setThumbnail(ok2)
+// .setFooter("Sad", message.author.displayAvatarURL);
+
+// return message.channel.send(embedwarn).then(m => m.delete(5500))
+dbl.hasVoted(message.author.id).then(voted => {
+   if(voted)  {
 
 
-  message.delete();
+
     var IGN = args[0];
 
 
@@ -152,8 +165,10 @@ dbl.getVotes().then(votes => {
   });
 } else {
   let ok3 = new Discord.RichEmbed()
-.setDescription("[Vote here](https://top.gg/bot/667975393495613442/vote)")
- return message.channel.send("You today haven't vote yet. click the link below to vote and use this command.").then(message.channel.send(ok3))
+.setDescription("You today haven't vote yet. [Vote here](https://top.gg/bot/667975393495613442/vote) to use the command.")
+.setColor("BLUE")
+  return message.channel.send(ok3)
+
 }
 });
     

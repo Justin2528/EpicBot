@@ -72,7 +72,8 @@ client.on("ready", () => {
 
     setInterval(() => {
         dbl.postStats(client.guilds.size);
-    }, 50000);
+      console.log(`Posted ${client.guilds.size} to DBL!`)
+    }, 900000);
 
 setInterval(function() {
   let stats = status[Math.floor(Math.random()*status.length)];

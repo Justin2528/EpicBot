@@ -9,8 +9,9 @@ module.exports = {
  message.delete() 
 const DBL = require("dblapi.js");
 const dbl = new DBL(process.env.TOKEL, client);
-dbl.getVotes().then(votes => {
-    if (votes.find(vote => vote.id == message.author.id)) {
+
+dbl.hasVoted(message.author.id).then(voted => {
+    if (voted) {
 
  var IGN = args[0];
  
@@ -92,9 +93,10 @@ message.channel.send(ok).then(message.channel.send(ok2));
 }) 
 } else {
   
- let ok3 = new Discord.RichEmbed()
-.setDescription("[Vote here](https://top.gg/bot/667975393495613442/vote)")
- return message.channel.send("You today haven't vote yet. click the link below to vote and use this command.").then(message.channel.send(ok3))
+  let ok3 = new Discord.RichEmbed()
+.setDescription("You today haven't vote yet. [Vote here](https://top.gg/bot/667975393495613442/vote) to use the command.")
+.setColor("BLUE")
+  return message.channel.send(ok3)
 }
    
 
