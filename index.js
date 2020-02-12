@@ -9,6 +9,8 @@ const client = new Client({ disableEveryone: true });
 const mentionHook = new WebhookClient("674133394623299595", process.env.WEBKEN);
 client.points = new Enmap({name: "points"});
 
+const dbl = new DBL(process.env.TOKEL, client);
+
 const ownerID = '386490806716071946'
 const active = new Map();
  let ops = {
@@ -68,16 +70,9 @@ let status = ["Shrek 5", "Prefix: epic>"]
 client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`);
 
-  setInterval(function() {
-            snekfetch.post(`https://top.gg/api/bots/667975393495613442/stats`)
-        .set('Authorization', process.env.TOKEL)
-        .send({
-            'server_count': client.guilds.size
-
-        }).then(console.log(`${client.guilds.size} was posted`)).catch((err) => {
-            console.log("ERROR! \n" + err);
-        });
-  }, 30000 )
+    setInterval(() => {
+        dbl.postStats(client.guilds.size);
+    }, 50000);
 
 setInterval(function() {
   let stats = status[Math.floor(Math.random()*status.length)];
@@ -132,7 +127,7 @@ if(message.channel.type === "dm") return message.channel.send(embedwarn).then(m 
 
   
     if (command) 
-        command.run(client, message, args, ops,guildconf,dsettings);
+        command.run(client, message, args, ops,guildconf,dsettings,dbl);
   if (message.guild) {
     // Let's simplify the `key` part of this.
     const key = `${message.guild.id}-${message.author.id}`;

@@ -6,7 +6,12 @@ module.exports = {
      usage: "<Minecraft IGN>",
  aliases: ["pitstats"],
     run: async (client, message, args) => {
-    message.delete() 
+ message.delete() 
+const DBL = require("dblapi.js");
+const dbl = new DBL(process.env.TOKEL, client);
+dbl.getVotes().then(votes => {
+    if (votes.find(vote => vote.id == message.author.id)) {
+
  var IGN = args[0];
  
 if(!IGN) return message.channel.send("Ok, what IS THE IGN????")
@@ -85,5 +90,14 @@ let ok2 = new Discord.RichEmbed()
 
 message.channel.send(ok).then(message.channel.send(ok2));
 }) 
+} else {
+  
+ let ok3 = new Discord.RichEmbed()
+.setDescription("[Vote here](https://top.gg/bot/667975393495613442/vote)")
+ return message.channel.send("You today haven't vote yet. click the link below to vote and use this command.").then(message.channel.send(ok3))
+}
+   
+
+    });
     }
 }

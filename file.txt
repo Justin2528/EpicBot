@@ -37,3 +37,17 @@ let embedwarn = new Discord.RichEmbed()
 .setFooter("Sad", message.author.displayAvatarURL);
 
 return message.channel.send(embedwarn).then(m => m.delete(5500))
+
+// Vote to use Command
+dbl.getVotes().then(votes => {
+    if (votes.find(vote => vote.id == message.author.id)) {
+//stuff
+} else {
+   let ok3 = new Discord.RichEmbed()
+.setDescription("[Vote here](https://top.gg/bot/667975393495613442/vote)")
+ return message.channel.send("You today haven't vote yet. click the link below to vote and use this command.").then(message.channel.send(ok3))
+
+}
+   
+
+    });
