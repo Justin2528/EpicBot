@@ -93,10 +93,11 @@ message.channel.send(ok).then(message.channel.send(ok2));
 }) 
 } else {
   
-  let ok3 = new Discord.RichEmbed()
+    let ok3 = new Discord.RichEmbed()
 .setDescription("You today haven't vote yet. [Vote here](https://top.gg/bot/667975393495613442/vote) to use the command.")
 .setColor("BLUE")
-  return message.channel.send(ok3)
+  return message.channel.send(ok3).then(m => m.delete(5000))
+
 }
    
 
