@@ -6,7 +6,7 @@ module.exports = {
  
     run: async (client, message, args,ops) => {
 let embed = new Discord.RichEmbed()
-.setDescription("[INVITE](https://discordapp.com/oauth2/authorize?client_id=667975393495613442&scope=bot&permissions=2084007120)");
+.setDescription("[INVITE](https://discordapp.com/oauth2/authorize?client_id=667975393495613442&scope=bot&permissions=2084007120)\n [BETA BOT INVITE](https://discordapp.com/oauth2/authorize?client_id=678907352220696596&scope=bot&permissions=2084007120)");
       message.channel.send(embed)
 
     }
