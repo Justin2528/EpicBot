@@ -1,6 +1,6 @@
 ![image](https://cdn.discordapp.com/attachments/671678458941800451/676450982002950184/1177_Pensive_Weird.gif)
 # NEWS
-### MERGE discord-epicbot-beta WITH STABLE 1/3/2020
+### NEW REBOOT COMMAND THAT YOU DON'T NEED TO KNOW ABOUT!!!! 2/3/2020
 ##### **Not that kinda important** YOU MUST VOTE TO USE epic>hypixel AND epic>pit 12/2/2020
 ##### NEW COMMAND removewarn 10/2/2020
 ##### ADDED LEVEL BAR AND SOME OTHER FEATURES TO epic>hypixel COMMAND 6/2/2020
