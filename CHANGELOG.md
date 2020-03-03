@@ -1,6 +1,7 @@
 ![image](https://cdn.discordapp.com/attachments/671678458941800451/676450982002950184/1177_Pensive_Weird.gif)
-# NEWS
-### MERGED SOMETHING 3/3/2020
+# CHANGELOG
+### CHANGELOG 3/3/2020
+##### MERGED SOMETHING 3/3/2020
 ##### NEW REBOOT COMMAND THAT YOU DON'T NEED TO KNOW ABOUT!!!! 2/3/2020
 ##### **Not that kinda important** YOU MUST VOTE TO USE epic>hypixel AND epic>pit 12/2/2020
 ##### NEW COMMAND removewarn 10/2/2020
