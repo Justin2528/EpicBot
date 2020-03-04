@@ -96,7 +96,7 @@ config({
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
-let status = ["Shrek 5", "Prefix: epic>", "NEW UGLY WEBSITE! https://discord-epicbot.glitch.me THIS LINK IS FOR STATUS UPDATE IF BOT IS DOWN"]
+let status = ["Shrek 5", "Prefix: epic>", "NEW UGLY WEBSITE! https://discord-epicbot.glitch.me THIS LINK IS FOR STATUS UPDATE IF BOT IS DOWN", "epic>invite => invite epicbot beta => type epic~adsapply => apply away!"]
 client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`);
 
