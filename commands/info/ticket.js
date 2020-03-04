@@ -7,7 +7,13 @@ module.exports = {
     description: "Create a ticket",
 
     run: async (client, message, args,ops,guildconf,dsettings) => {
-      
+      let ok1 = require("../../boop.json");
+        let chance = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+let ok2 = ok1.ads
+      let ok3 = ok2[Math.floor(Math.random() * ok2.length)]
+         if (chance < 30) {
+        message.channel.send(ok3)
+         }
 
     
 

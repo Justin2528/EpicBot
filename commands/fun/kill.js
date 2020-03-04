@@ -5,6 +5,13 @@ module.exports = {
     description: "kill something",
     usage: "something or someone or anything",
     run: async (client, message, args,ops,guildconf,dsettings) => {
+let ok1 = require("../../boop.json");
+        let chance = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+let ok2 = ok1.ads
+      let ok3 = ok2[Math.floor(Math.random() * ok2.length)]
+         if (chance < 30) {
+        message.channel.send(ok3)
+         }
 let deaths = ["has been stabbed by EpicBot", "has fall to their death irl", "has drunk to many water and died", `was stabbed by ${args[0]} for some reason`, "has what too many time and was stabbed by some random boomer", "died", "somehow died", "died because of some kid keep posting cringe video."]
 let death = deaths[Math.floor(Math.random() * deaths.length)]
        if (args[0] === "epicbot") return message.channel.send("No");

@@ -4,10 +4,17 @@ const { getMember, formatDate } = require("../../functions.js");
 
 module.exports = {
     name: "whois",
-    aliases: ["who", "user", "info"],
+    aliases: ["who", "user", "info", "userinfo"],
     description: "Returns user information",
     usage: "[username | id | mention]",
     run: (client, message, args) => {
+let ok1 = require("../../boop.json");
+        let chance = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+let ok2 = ok1.ads
+      let ok3 = ok2[Math.floor(Math.random() * ok2.length)]
+         if (chance < 30) {
+        message.channel.send(ok3)
+         }
         const member = getMember(message, args.join(" "));
 
         // Member variables

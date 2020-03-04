@@ -1,11 +1,17 @@
 const Discord = require("discord.js")
 module.exports = {
-    name: "search",
+    name: "searchuser",
     category: "info",
     description: "search some users",
      usage: "search < 1+ characterSearch >",
     run: async (client, message, args) => {
-      
+      let ok1 = require("../../boop.json");
+        let chance = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+let ok2 = ok1.ads
+      let ok3 = ok2[Math.floor(Math.random() * ok2.length)]
+         if (chance < 30) {
+        message.channel.send(ok3)
+         }
 let Embed = new Discord.RichEmbed()
         .setColor("0x36393e");
 

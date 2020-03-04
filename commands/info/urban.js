@@ -6,6 +6,13 @@ module.exports = {
     description: "urban any word (Must be in a NSFW channel to use this command!)",
 
     run: async (client, message, args) => {
+let ok1 = require("../../boop.json");
+        let chance = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+let ok2 = ok1.ads
+      let ok3 = ok2[Math.floor(Math.random() * ok2.length)]
+         if (chance < 30) {
+        message.channel.send(ok3)
+         }
    if (!message.channel.nsfw) return message.channel.send("No. NSFW channel pls");
  if(message.channel.nsfw) {
       if (!args[0]) return message.channel.send(`***Please specify some text!***`);
