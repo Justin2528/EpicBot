@@ -1,5 +1,5 @@
 module.exports = {
-    name: "stats",
+    name: "status",
     category: "info",
     description: "tell my online time",
  
