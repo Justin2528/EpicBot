@@ -16,6 +16,7 @@ console.log(chance)
 console.log("sad")
 console.log(chance)
 }
+
 //  console.log("IT WORKED")
 
 //         }
