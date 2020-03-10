@@ -1,6 +1,7 @@
 ![image](https://cdn.discordapp.com/attachments/671678458941800451/676450982002950184/1177_Pensive_Weird.gif)
 # CHANGELOG
-### FIXING HIGH PING LATENCY. 4/3/2020
+### BOT IS UP AGAIN, SORRY! 10/3/2020
+##### FIXING HIGH PING LATENCY. 4/3/2020
 ##### ADS INCOMING also EpicBot Beta will have no ads. and i mean ads I mean like "HEY, DO THAT BLAH BOO FOO" 4/3/2020
 ##### CHANGELOG 3/3/2020
 ##### MERGED SOMETHING 3/3/2020
