@@ -2,6 +2,7 @@ dependencies:
   ascii-table: 0.0.9
   beautify: 0.0.8
   chance: 1.1.4
+  child_process: 1.0.2
   common-tags: 1.8.0
   dblapi.js: 2.4.0
   discord-giveaways: 2.4.4
@@ -393,6 +394,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-qbqoYKP5tZWmuBsahocxIe06Jp4=
+  /child_process/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-sffn/HPSXn/R1FWtyU4UODAYK1o=
   /cli-color/1.2.0:
     dependencies:
       ansi-regex: 2.1.1
@@ -2633,6 +2638,7 @@ specifiers:
   ascii-table: ^0.0.9
   beautify: ^0.0.8
   chance: ^1.1.4
+  child_process: ^1.0.2
   common-tags: ^1.8.0
   dblapi.js: ^2.4.0
   discord-giveaways: ^2.4.4

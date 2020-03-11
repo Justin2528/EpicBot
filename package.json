@@ -30,7 +30,8 @@
     "enmap": "^5.2.4",
     "moment": "^2.24.0",
     "quick.hook": "^1.5.1",
-    "moment-duration-format": "^2.2.2"
+    "moment-duration-format": "^2.2.2",
+    "child_process": "^1.0.2"
   },
   "repository": {
     "url": "https://github.com/Justin2528/EpicBot/Beta"
