@@ -3,13 +3,14 @@
     "start": "node index.js",
     "test": "node test.js"
   },
+"engines": { "node": "10.x" },
   "dependencies": {
     "ascii-table": "^0.0.9",
     "chance": "^1.1.4",
     "common-tags": "^1.8.0",
     "discord.js": "^11.6.1",
     "dotenv": "^8.2.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "node-fetch": "^2.6.0",
     "random-puppy": "^1.1.0",
     "relevant-urban": "^2.0.0",

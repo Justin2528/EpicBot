@@ -83,7 +83,7 @@ app.get('/', function(request, response) {
 app.listen(process.env.PORT, () => console.log(`EpicBot listening on port ${process.env.PORT}!`));
 
 
-app.use(express.static('public'))
+
 client.commands = new Collection();
 client.aliases = new Collection();
 
@@ -119,7 +119,18 @@ setInterval(function() {
         embedColor: "#00FFFF",
         reaction: "🎉"
     });
-});
+//       setInterval(function() {
+//             snekfetch.post(`https://api.botlist.space/v1/bots/667975393495613442`)
+//         .set('Authorization', process.env.TOKELL)
+//         .send({
+//            'server_count': client.guilds.size
+       
+//         })
+
+  
+// console.log(`Posted ${client.guilds.size} to botlist.space`)
+//    }, 100000)
+ });
 
 client.on("message", async message => {
    if (message.author.bot) return;   

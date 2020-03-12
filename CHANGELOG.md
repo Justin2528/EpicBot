@@ -1,8 +1,10 @@
 ![image](https://cdn.discordapp.com/attachments/671678458941800451/676450982002950184/1177_Pensive_Weird.gif)
 
 # CHANGELOG
-### FACT: YOU CAN ONLY PUT 1 ADS BUT IF YOU'RE A PATRON YOU CAN PUT 2 MORE! 11/3/2020
-### ## NEW COVID-19 (CORONAVIRUS COMMAND!) (epic>covid19) only in this bot since beta will be now used for epic~adsapply.
+### ADDED FACTIONS (Demon/Angel) and a lot of stuff TO epic>pit
+##### FIXED MUSIC COMMANDS/BOT IS NOT RESPONDING PROBLEMS.
+##### FACT: YOU CAN ONLY PUT 1 ADS BUT IF YOU'RE A PATRON YOU CAN PUT 2 MORE! 11/3/2020
+##### ## NEW COVID-19 (CORONAVIRUS COMMAND!) (epic>covid19) only in this bot since beta will be now used for epic~adsapply.
 ##### BOT IS UP AGAIN BECAUSE FIXING SOME PROBLEMS AND ADDING NEW FEATURES. 11/3/2020
 ##### FIXED HIGH PING LATENCY!! YAY. ALSO TYPE epic>invite and invite BETA VERSION OF ME THEN TYPE epic~adsapply TO ADD YOUR ADS!!!! 10/3/2020
 ##### BOT IS UP AGAIN, SORRY! 10/3/2020

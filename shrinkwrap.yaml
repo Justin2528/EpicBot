@@ -14,7 +14,7 @@ dependencies:
   express-glitch-keepalive: 0.2.0
   ffmpeg: 0.0.4
   ffmpeg-binaries: 4.0.0
-  minimist: 1.2.0
+  minimist: 1.2.4
   moment: 2.24.0
   moment-duration-format: 2.3.2
   node-fetch: 2.6.0
@@ -1653,6 +1653,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
+  /minimist/1.2.4:
+    dev: false
+    resolution:
+      integrity: sha512-wTiNDqe4D2rbTJGZk1qcdZgFtY0/r+iuE6GDT7V0/+Gu5MLpIDm4+CssDECR79OJs/OxLPXMzdxy153b5Qy3hg==
   /mkdirp/0.5.1:
     dependencies:
       minimist: 0.0.8
@@ -2650,7 +2654,7 @@ specifiers:
   express-glitch-keepalive: ^0.2.0
   ffmpeg: ^0.0.4
   ffmpeg-binaries: ^4.0.0
-  minimist: ^1.2.0
+  minimist: ^1.2.3
   moment: ^2.24.0
   moment-duration-format: ^2.2.2
   node-fetch: ^2.6.0
