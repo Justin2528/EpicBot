@@ -28,6 +28,7 @@ if(!IGN) return message.channel.send("Ok, what IS THE IGN????")
 
 console.log(url);
 
+      
 
 
 const snekfetch = require("snekfetch");
@@ -43,23 +44,29 @@ if(body.player.lastLogout < body.player.lastLogin){
   photo = "https://images-ext-1.discordapp.net/external/74xyeTgd4BElwkkoe92yB3zEwD1ln4N1rh2zeKxVwt8/https/image.ibb.co/h9VNfq/image.png"
 } 
 
-if(!body.player.stats.Pit) return message.channel.send(`ERROR 404: Uh, ${IGN} never player pit? (hypixel pit)`)
 
-if(!body.player.stats.Pit.pit_stats_ptl.playtime_minutes) return message.channel.send(`ERROR 404: Uh, ${IGN} never player pit? (hypixel pit)`)
+if(!body.player.stats.Pit) return message.channel.send(`ERROR 404: Uh, ${IGN} never play pit? (hypixel pit)`)
+
+if(!body.player.stats.Pit.pit_stats_ptl) return message.channel.send(`ERROR 404: Uh, ${IGN} never play pit? (hypixel pit)`)
 
 let image = "https://visage.surgeplay.com/full/" + body.player.uuid +".png"
 
 let hours = Math.floor(body.player.stats.Pit.pit_stats_ptl.playtime_minutes / 60);
 
 console.log(body)
+let rank = ""
+if(body.player.newPackageRank.includes("MVP_PLUS")) rank = "MVP+"
 
+if(body.player.newPackageRank.includes("VIP_PLUS")) rank = "VIP+"
+
+if(body.player.monthlyPackageRank === "SUPERSTAR") {rank = "MVP++"}
 let ok = new Discord.RichEmbed()
 .setTitle("Pit stats (Hypixel)")
 .setColor("9b7653")
-.setDescription(`<${body.player.stats.Pit.profile.genesis_allegiance || "NOT IN A FACTION (ANGEL/DEMON)"}> ${body.player.displayname}'s Pit stats`)
+.setDescription(`<${body.player.stats.Pit.profile.genesis_allegiance || "NOT IN A FACTION (ANGEL/DEMON)"}> [${rank||body.player.newPackageRank}] ${body.player.displayname}'s Pit stats`)
 .addField("XP", body.player.stats.Pit.profile.xp || "0", true)
-.addField("Play time (minutes)", body.player.stats.Pit.pit_stats_ptl.playtime_minutes || "0",true)
-.addField("Play time (hour)", hours, true)
+.addField("Play time (minutes)", body.player.stats.Pit.pit_stats_ptl.playtime_minutes || "0/Special Player",true)
+.addField("Play time (hour)", hours + "/Special Player", true)
 .addField("Enderchest open times", body.player.stats.Pit.pit_stats_ptl.enderchest_opened || "0", true)
 .addField("Joins", body.player.stats.Pit.pit_stats_ptl.joins || "0", true)
 .setThumbnail("https://hypixel.net/styles/hypixel-uix/hypixel/game-icons/Prototype-64.png")

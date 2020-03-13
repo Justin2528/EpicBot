@@ -36,7 +36,7 @@ dbl.hasVoted(message.author.id).then(voted => {
     var IGN = args[0];
 
 
-    if (!IGN) return message.channel.send("Ok, where is da IGN????");
+    if (!IGN) return message.channel.send("Ok, where is the IGN????");
 
     var url =
       "https://api.hypixel.net/player?key=" +
@@ -74,13 +74,19 @@ dbl.hasVoted(message.author.id).then(voted => {
         "https://visage.surgeplay.com/full/" + body.player.uuid + ".png";
       let image2 =
         "https://gen.plancke.io/exp/" + body.player.displayname + ".png";
+let rank = ""
+if(body.player.newPackageRank.includes("MVP_PLUS")) rank = "MVP+"
+
+if(body.player.newPackageRank.includes("VIP_PLUS")) rank = "VIP+"
+
+if(body.player.monthlyPackageRank === "SUPERSTAR") {rank = "MVP++"}
       if (!body.player)
         return message.channel.send(`ERROR: Not even the stats`);
 
      let ok3 = new Discord.RichEmbed()
         .setTitle("Hypixel stats (Minecraft Server)")
         .setColor("9b7653")
-        .setDescription(`${body.player.displayname}'s Hypixel stats <SINCE THIS PLAYER IS AN SPECIAL PLAYER, THERE MIGHT BE SOMETHING MISSING>`)
+        .setDescription(`[${body.player.rank}]${body.player.displayname}'s Hypixel stats <SINCE THIS PLAYER IS AN SPECIAL PLAYER, THERE MIGHT BE SOMETHING MISSING>`)
         .setImage(image)
         .setThumbnail(
           "https://hypixel.net/styles/hypixel-uix/hypixel/platform-pc.png"
@@ -88,8 +94,7 @@ dbl.hasVoted(message.author.id).then(voted => {
         .addField("First Login", date2, true)
 
         .addField("Display Name", body.player.displayname || "0", true)
-        .addField("Package Rank", body.player.newPackageRank || "NON", true)
-        .addField("Speical Rank", body.player.rank || "NOPE", true)
+  
         .addField("Network EXP", body.player.networkExp || "0", true)
         .addField("Karma", body.player.karma || "0", true)
         .addField(
@@ -103,8 +108,7 @@ dbl.hasVoted(message.author.id).then(voted => {
         .setColor("9b7653")
         .setDescription(`${body.player.displayname} Hypixel Level`)
         .setImage(image2);
-      if (!body.player.lastLogin)
-        return message.channel.send(ok3).then(message.channel.send(ok4))
+  
       if (!body.player.firstLogin) return message.channel.send("NOPE");
       if (!body.player.displayname)
         return message.channel.send("ERROR 404: Uh... UhHHeawewaehwaje");
@@ -120,6 +124,25 @@ dbl.hasVoted(message.author.id).then(voted => {
       }
 
 
+     let ok5 = new Discord.RichEmbed()
+        .setTitle("Hypixel stats (Minecraft Server)")
+        .setColor("9b7653")
+        .setDescription(`[OWNER] Hypixel's Hypixel stats <SINCE THIS PLAYER IS AN SPECIAL PLAYER, THERE MIGHT BE SOMETHING MISSING>`)
+        .setImage(image)
+        .setThumbnail(
+          "https://hypixel.net/styles/hypixel-uix/hypixel/platform-pc.png"
+        )
+        .addField("First Login", date2, true)
+
+        .addField("Display Name", body.player.displayname || "0", true)
+   
+        .addField("Network EXP", body.player.networkExp || "0", true)
+        .addField("Karma", body.player.karma || "0", true)
+        .addField(
+          "Rank + (PLUS) Color",
+          body.player.rankPlusColor || "NOPE",
+          true
+        )
  
 
       console.log(body);
@@ -127,7 +150,7 @@ dbl.hasVoted(message.author.id).then(voted => {
       let ok = new Discord.RichEmbed()
         .setTitle("Hypixel stats (Minecraft Server)")
         .setColor("9b7653")
-        .setDescription(`${body.player.displayname}'s Hypixel stats`)
+        .setDescription(`${rank||body.player.newPackageRank} ${body.player.displayname}'s Hypixel stats`)
         .setImage(image)
         .setThumbnail(
           "https://hypixel.net/styles/hypixel-uix/hypixel/platform-pc.png"
@@ -136,8 +159,8 @@ dbl.hasVoted(message.author.id).then(voted => {
         .addField("Last Login", date1, true)
         .addField("Last Logout", date3, true)
         .addField("Display Name", body.player.displayname || "0", true)
-        .addField("Package Rank", body.player.newPackageRank || "NON", true)
-        .addField("Speical Rank", body.player.rank || "NOPE", true)
+
+
         .addField("Network EXP", body.player.networkExp || "0", true)
         .addField("Karma", body.player.karma || "0", true)
         .addField(
@@ -160,7 +183,9 @@ dbl.hasVoted(message.author.id).then(voted => {
         .setImage(image2);
 
       //Ok LOL
-
+if(body.player.displayname === "hypixel") return message.channel.send(ok5).then(message.channel.send(ok2))
+    if (!body.player.lastLogin)
+        return message.channel.send(ok3).then(message.channel.send(ok4))
       message.channel.send(ok);
       message.channel.send(ok2);
     
