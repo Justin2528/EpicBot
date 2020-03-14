@@ -6,7 +6,7 @@ const giveaways = require("discord-giveaways")
 const DBL = require("dblapi.js");
 const Enmap = require('enmap');
 const client = new Client({ disableEveryone: true });
-const mentionHook = new WebhookClient("674133394623299595", process.env.WEBKEN);
+const hook = new WebhookClient("687949301036613634", process.env.WEBKEN);
 client.points = new Enmap({name: "points"});
 
 const dbl = new DBL(process.env.TOKEL, client);
@@ -65,6 +65,8 @@ client.on("guildCreate", guild => {
 
     let channel = client.channels.get(guild.systemChannelID || channelID);
     channel.send(ok);
+
+  hook.send(client.guilds.size + " " + guild.name)
 })
 client.on("guildDelete", guild => {
     console.log("Left a guild: " + guild.name);

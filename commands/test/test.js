@@ -11,11 +11,14 @@ let ok2 = ok1.ads
       let ok3 = ok2[Math.floor(Math.random() * ok2.length)]
          if (chance < 30) {
         message.channel.send(ok3)
+message.channel.send("test yes")
 console.log(chance)
          } else {
 console.log("sad")
 console.log(chance)
+message.channel.send("test failed")
 }
+      
 
 //  console.log("IT WORKED")
 
