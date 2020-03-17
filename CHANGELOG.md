@@ -1,7 +1,8 @@
 ![image](https://cdn.discordapp.com/attachments/671678458941800451/676450982002950184/1177_Pensive_Weird.gif)
 
 # CHANGELOG
-### ADDED EVEN MORE STUFF TO epic>pit AND epic>hypixel 13/3/2020
+### REMOVED SOME STUFF 17/3/2020
+##### ADDED EVEN MORE STUFF TO epic>pit AND epic>hypixel 13/3/2020
 ##### ADDED FACTIONS (Demon/Angel) and a lot of stuff TO epic>pit 12/3/2020
 ##### FIXED MUSIC COMMANDS/BOT IS NOT RESPONDING PROBLEMS. 12/3/2020
 ##### FACT: YOU CAN ONLY PUT 1 ADS BUT IF YOU'RE A PATRON YOU CAN PUT 2 MORE! 11/3/2020
